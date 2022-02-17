@@ -14,6 +14,8 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="Models\Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -21,6 +23,8 @@
     <None Remove="Views\Home\" />
     <None Remove="Views\Shared\" />
     <None Remove="Controllers\" />
+    <None Remove="Models\ViewModels\" />
+    <None Remove="Models\Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">

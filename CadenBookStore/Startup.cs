@@ -30,6 +30,7 @@ namespace CadenBookStore
         {
             services.AddControllersWithViews();
 
+
             services.AddDbContext<BookstoreContext>(options =>
             {
                 options.UseSqlite(Configuration["ConnectionStrings:BookDBConnection"]);
