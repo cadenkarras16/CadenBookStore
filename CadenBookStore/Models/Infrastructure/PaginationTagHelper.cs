@@ -30,6 +30,7 @@ namespace CadenBookStore.Models.Infrastructure
 
         //Different than the ViewContext
         public PageInfo PageBlah { get; set; }
+
         public string PageAction { get; set; }
 
 
