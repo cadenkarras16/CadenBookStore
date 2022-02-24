@@ -16,6 +16,9 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\ViewModels\" />
     <Folder Include="Models\Infrastructure\" />
+    <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Types\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\" />
@@ -25,6 +28,9 @@
     <None Remove="Controllers\" />
     <None Remove="Models\ViewModels\" />
     <None Remove="Models\Infrastructure\" />
+    <None Remove="Components\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\Types\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">

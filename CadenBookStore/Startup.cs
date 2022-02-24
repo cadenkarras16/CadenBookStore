@@ -55,11 +55,28 @@ namespace CadenBookStore
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                    name: "categorypage",
+                    pattern: "{bookCategory}/Page{pageNum}",
+                    defaults: new { Controller = "Home", Action = "Index", pageNum = 1}
+                    );
+
+                //paging one
                 endpoints.MapControllerRoute(
                     name: "Paging",
                     pattern: "Page{pageNum}",
                     defaults: new { Controller = "Home", Action = "Index", pageNum = 1 }
                     );
+
+
+                //Category one
+                endpoints.MapControllerRoute("category",
+                    "{bookCategory}",
+                    new { Controller = "Home", action = "Index", pageNum = 1 }
+                    );
+
+
 
 
                 endpoints.MapDefaultControllerRoute();
