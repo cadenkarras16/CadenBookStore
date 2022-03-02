@@ -37,6 +37,13 @@ namespace CadenBookStore
             });
 
             services.AddScoped<IBookProjectRepository, EFBookProjectRepository>();
+
+
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +57,8 @@ namespace CadenBookStore
 
             //use the files in the wwwroot folder
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
@@ -80,6 +89,10 @@ namespace CadenBookStore
 
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
+
+
             });
         }
     }
