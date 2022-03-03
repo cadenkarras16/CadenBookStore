@@ -9,7 +9,7 @@ namespace CadenBookStore.Models
     {
         public List<BasketLineItem> Items { get; set; } = new List<BasketLineItem>();
 
-        public void AddItem(Book bk, int qty)
+        public virtual void AddItem(Book bk, int qty)
         {
             BasketLineItem line = Items
                 .Where(b => b.Book.BookId == bk.BookId)
@@ -28,6 +28,17 @@ namespace CadenBookStore.Models
                 line.Quantity += qty;
             }
         }
+
+        public virtual void RemoveItem(Book bk)
+        {
+            Items.RemoveAll(x => x.Book.BookId == bk.BookId);
+        }
+
+        public virtual void ClearBasket()
+        {
+            Items.Clear();
+        }
+
         public double CalculateTotal()
         {
             double sum = Items.Sum(x => x.Quantity * 25);
