@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace CadenBookStore.Models
@@ -53,6 +54,7 @@ namespace CadenBookStore.Models
 
     public class BasketLineItem
     {
+        [Key]
         public int LineID { get; set; }
 
         public Book Book { get; set; }

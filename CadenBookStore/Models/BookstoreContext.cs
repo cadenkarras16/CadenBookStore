@@ -20,7 +20,7 @@ namespace CadenBookStore.Models
         }
 
         public DbSet<Book> Books { get; set; }
-
+        public DbSet<BookCart> bookcarts { get; set; }
         
     }
 }

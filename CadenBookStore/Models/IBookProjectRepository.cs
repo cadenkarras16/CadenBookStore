@@ -6,5 +6,6 @@ namespace CadenBookStore.Models
     public interface IBookProjectRepository
     {
         IQueryable<Book> Books { get; }
+
     }
 }

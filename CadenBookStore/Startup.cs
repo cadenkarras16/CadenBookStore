@@ -37,16 +37,14 @@ namespace CadenBookStore
             });
 
             services.AddScoped<IBookProjectRepository, EFBookProjectRepository>();
-
+            services.AddScoped<IBookCartRepository, EFBookCartRepository>();
 
             services.AddRazorPages();
 
             services.AddDistributedMemoryCache();
-
             services.AddSession();
 
             services.AddScoped<Basket>(x => SessionBasket.GetBasket(x));
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
