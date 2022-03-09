@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CadenBookStore.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20220309214203_initial")]
+    [Migration("20220309224004_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

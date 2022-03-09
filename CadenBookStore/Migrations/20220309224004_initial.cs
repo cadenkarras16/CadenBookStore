@@ -27,26 +27,6 @@ namespace CadenBookStore.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Books",
-                columns: table => new
-                {
-                    BookId = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(nullable: false),
-                    Author = table.Column<string>(nullable: false),
-                    Publisher = table.Column<string>(nullable: false),
-                    Isbn = table.Column<string>(nullable: false),
-                    Classification = table.Column<string>(nullable: false),
-                    Category = table.Column<string>(nullable: false),
-                    PageCount = table.Column<int>(nullable: false),
-                    Price = table.Column<double>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Books", x => x.BookId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "BasketLineItem",
                 columns: table => new
                 {
@@ -92,8 +72,6 @@ namespace CadenBookStore.Migrations
             migrationBuilder.DropTable(
                 name: "bookcarts");
 
-            migrationBuilder.DropTable(
-                name: "Books");
         }
     }
 }
