@@ -1,0 +1,43 @@
+﻿@page "/admin/purchases"
+@inherits OwningComponentBase<IBookCartRepository>
+<PurchaseTable TableTitle="Uncollected Purchases" bookcart="UncollectedPurchases"
+               ButtonLabel="Purchased" PurchaseSelected="CollectPurchase"></PurchaseTable>
+
+<PurchaseTable TableTitle="Collected Purchases" bookcart="CollectedPurchases"
+               ButtonLabel="Reset" PurchaseSelected="ResetPurchase"></PurchaseTable>
+
+<button class="btn btn-info" @onclick="@(x => UpdateData())">Refresh Data</button>
+
+@code {
+
+    public IBookCartRepository repo => Service;
+    public IEnumerable<BookCart> AllPurchases { get; set; }
+    public IEnumerable<BookCart> UncollectedPurchases { get; set; }
+    public IEnumerable<BookCart> CollectedPurchases { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+
+    public async Task UpdateData()
+    {
+        AllPurchases = await repo.bookcarts.ToListAsync();
+        UncollectedPurchases = AllPurchases.Where(x => !x.BookReceived);
+        CollectedPurchases = AllPurchases.Where(x => x.BookReceived);
+
+    }
+
+    public void CollectPurchase(int id) => UpdatePurchase(id, true);
+    public void ResetPurchase(int id) => UpdatePurchase(id, false);
+
+    private void UpdatePurchase (int id, bool purchased)
+    {
+        BookCart d = repo.bookcarts.FirstOrDefault(x => x.CartId == id);
+        d.BookReceived = purchased;
+        repo.SaveBook(d);
+    }
+
+}
+
+
