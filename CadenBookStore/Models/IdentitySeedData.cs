@@ -10,7 +10,7 @@ namespace CadenBookStore.Models
     public static class IdentitySeedData
     {
         private const string adminUser = "Admin";
-        private const string adminPassword = "Password123456!";
+        private const string adminPassword = "413ExtraYeetPeriod(t)!";
 
         //I think this line was for a random example. Not suppose to be in here public static int num = 0;
 
