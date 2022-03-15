@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CadenBookStore.Migrations.AppIdentityDB
 {
     [DbContext(typeof(AppIdentityDBContext))]
-    [Migration("20220314182734_IdentitySetup")]
-    partial class IdentitySetup
+    [Migration("20220315034416_Identityagain")]
+    partial class Identityagain
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

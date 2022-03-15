@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CadenBookStore.Migrations.AppIdentityDB
 {
-    public partial class IdentitySetup : Migration
+    public partial class Identityagain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

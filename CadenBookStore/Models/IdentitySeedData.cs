@@ -12,7 +12,7 @@ namespace CadenBookStore.Models
         private const string adminUser = "Admin";
         private const string adminPassword = "413ExtraYeetPeriod(t)!";
 
-        //I think this line was for a random example. Not suppose to be in here public static int num = 0;
+        //I think this line was for a random example. Not suppose to be in here public static int num = 0; 
 
 
         public static async void EnsurePopulated (IApplicationBuilder app)
