@@ -100,8 +100,6 @@ namespace CadenBookStore
                     );
 
 
-
-
                 endpoints.MapDefaultControllerRoute();
 
                 endpoints.MapRazorPages();
@@ -109,6 +107,8 @@ namespace CadenBookStore
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
             });
+
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

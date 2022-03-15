@@ -1,4 +1,8 @@
-﻿@page
+﻿@page "/admin"
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
 @model CadenBookStore.Pages.Admin.IndexModel
 @{
 }
